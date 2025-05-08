@@ -2,6 +2,7 @@
     "files.associations": {
         "system_error": "c",
         "iosfwd": "c",
-        "xlocbuf": "c"
+        "xlocbuf": "c",
+        "array": "cpp"
     }
 }
