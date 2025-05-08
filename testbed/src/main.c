@@ -1,6 +1,11 @@
-#include <test.h>
+#include <core/logger.h>
 
 int main(void) {
-    print_int(42);
+    AFATAL("A test message: %f", 4.24f);
+    AERROR("A test message: %f", 4.24f);
+    AWARN("A test message: %f", 4.24f);
+    AINFO("A test message: %f", 4.24f);
+    ADEBUG("A test message: %f", 4.24f);
+    ATRACE("A test message: %f", 4.24f);
     return 0;
 }

@@ -87,7 +87,7 @@ STATIC_ASSERT(sizeof(f64) == 8, "Expected f64 to be 8 bytes.");
 #ifdef _MSC_VER
 #define AAPI __declspec(dllexport)
 #else
-#define AAPI    __attribute__((visibility("default")))
+#define AAPI __attribute__((visibility("default")))
 #endif
 #else
 // Imports
