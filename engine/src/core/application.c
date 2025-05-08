@@ -4,6 +4,7 @@
 #include "logger.h"
 
 #include "platform/platform.h"
+#include "core/amemory.h"
 
 typedef struct application_state {
     game* game_inst;
@@ -58,12 +59,14 @@ b8 application_create(game* game_inst) {
     }
 
     app_state.game_inst->on_resize(app_state.game_inst, app_state.width, app_state.height);
-
+ 
     initialized = TRUE;
     return TRUE;
 }
 
 b8 application_run() {
+    AINFO(get_memory_usage_str());
+
     while (app_state.is_running) {
         if (!platform_pump_messages(&app_state.platform)) {
             app_state.is_running = FALSE;
